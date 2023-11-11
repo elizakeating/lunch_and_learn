@@ -27,3 +27,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+/spec/fixtures/vcr_cassettes/random_country.yml
+
+/coverage
