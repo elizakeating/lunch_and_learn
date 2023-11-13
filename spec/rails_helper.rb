@@ -80,4 +80,11 @@ VCR.configure do |config|
   config.filter_sensitive_data("edamame_api_key") {
     Rails.application.credentials.edamam[:key]
   }
+  config.filter_sensitive_data("youtube_api_key") {
+    Rails.application.credentials.youtube[:key]
+  }
+
+  config.filter_sensitive_data("unsplash_api_key") {
+    Rails.application.credentials.unsplash[:key]
+  }
 end
