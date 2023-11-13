@@ -83,8 +83,10 @@ VCR.configure do |config|
   config.filter_sensitive_data("youtube_api_key") {
     Rails.application.credentials.youtube[:key]
   }
-
   config.filter_sensitive_data("unsplash_api_key") {
     Rails.application.credentials.unsplash[:key]
+  }
+  config.filter_sensitive_data("places_api_key") {
+    Rails.application.credentials.places[:key]
   }
 end
