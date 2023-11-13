@@ -10,5 +10,5 @@ User.create(
   name: "bob",
   email: "bob@gmail.com",
   password: "1234",
-  api_key: "api_key"
+  api_key: "abcdefgh"
 )
