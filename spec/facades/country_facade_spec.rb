@@ -11,5 +11,16 @@ RSpec.describe CountryFacade do
         end
       end
     end
+
+    describe "#search_country_lat_long" do
+      it "should return lat long for country" do
+        VCR.use_cassette("france_country_sites") do
+          coordinates = CountryFacade.new.search_country_lat_long("France")
+
+          expect(coordinates).to be_an(Array)
+          expect(coordinates.count).to eq(2)
+        end
+      end
+    end
   end
 end
