@@ -3,6 +3,10 @@ class CountryService
     get_url("/v3.1/all?fields=name")
   end
 
+  def search_country_lat_long(country)
+    get_url("/v3.1/name/#{country}")
+  end
+
   def get_url(url)
     response = conn.get(url)
 
