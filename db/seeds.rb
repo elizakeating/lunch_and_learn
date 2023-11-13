@@ -6,9 +6,28 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-User.create(
+user = User.create(
   name: "bob",
   email: "bob@gmail.com",
   password: "1234",
   api_key: "abcdefgh"
+)
+
+user_2 = User.create(
+  name: "sam",
+  email: "sam@gmail.com",
+  password: "1234",
+  api_key: "ijklmnop"
+)
+
+user.favorites.create(
+  country: "country 1",
+  recipe_link: "https://recipe_link_1.com",
+  recipe_title: "recipe 1"
+)
+
+user.favorites.create(
+  country: "country 2",
+  recipe_link: "https://recipe_link_2.com",
+  recipe_title: "recipe 2"
 )
