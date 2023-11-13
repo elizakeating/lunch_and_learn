@@ -24,8 +24,6 @@ RSpec.describe LearningResourceSerializer do
 
       serialized_data = LearningResourceSerializer.new(learning_resource).serializable_hash
 
-      # binding.pry
-
       expect(serialized_data).to eq(
         {
           data: {
