@@ -5,11 +5,12 @@ This api allows a user to register, login, search for cusines by country, learn 
 ## Table of Contents:
 1. [Learning Goals](#learning-goals)
 2. [Setup](#setup)
+   - [Database Setup](#database-setup)
    - [Edamam Setup](#edamam-setup)
    - [Youtube (Google) Setup](#youtube-google-api-setup)
    - [Unslpash Setup](#unsplash)
    - [REST Countries API Setup](#rest-countries)
-3. [Endpoints](#endpoints)
+4. [Endpoints](#endpoints)
    - [Get Recipes for a Particular Country](#get-recipes-for-a-particular-country)
    - [Get Learning Resources for a Particular Country](#get-learning-resources-for-a-particular-country)
    - [User Registration](#user-registration)
@@ -33,6 +34,13 @@ This api calls on 4 other external APIs. These are:
 - youtube (google)
 - unsplash
 - REST Countries API
+
+### Database Setup
+
+The users and favorites are stored in this api. Please make sure to do `rails db:{drop,create,migrate,seed}` in order to set up the database.
+
+The users table holds `name, email, password_digest, api_key`.
+The favorites table holds `country, recipe_link, recipe_title, user_id`.
 
 ### Edamam Setup
 
